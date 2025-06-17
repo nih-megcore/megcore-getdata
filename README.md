@@ -8,12 +8,12 @@ from get_megdata.get_testdata import megdata
 ```
 
 ```
-megdata(
-    task_type=None,
-    output_dir=None,
-    version=None,
-    get_types=['all'],
-    out_format='bids',
-)
-
+gd = megdata(task_type='rest')
+gd.getdata()  #Downloads data to ~/nihmeg_test_data
 ```
+Namespace variables are dot accessible in the gd.data variable <br>
+e.g.) gd.bem provides the path to the bem output <br>
+Additional tags: [ 'bem', 'bidsT1w', 'brik_in', 'fwd', 'meg_fname', 'noise_fname', 'orthohull', 'src', 'subjects_dir', 'trans'] <br>
+
+
+
