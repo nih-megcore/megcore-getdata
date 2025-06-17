@@ -19,14 +19,8 @@ classifiers=[
         "Operating System :: Linux/Unix",
     ]
 dependencies = ["requests"] 
-dynamic = ["version"]
+version = "v0.1.0"
 
 [project.optional-dependencies]
 testing = ['pytest']
 
-#[project.scripts]
-
-
-#[tool.setuptools.packages.find]
-#include = ["nih2mne*"]
-#exclude = ["extras*", "conda*"]
