@@ -25,5 +25,5 @@ jobs:
         run: $CONDA/bin/pip install git+https://github.com/nih-megcore/megcore-getdata.git
       - name: Pytest
         shell: bash -el {0}
-        run: pytest
+        run: $CONDA/bin/python -m pytest
   
