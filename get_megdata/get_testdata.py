@@ -31,9 +31,20 @@ data_dict['rest']['v1.0.0'] = dict(
                          mne_outputs = 'sub-ON08710_mne_outputs.tar.gz',
                          noise_fname = 'sub-ON08710_ses-1_task-noise_run-01_meg.tar.gz',
                          out_dir = 'rest/v_1_0_0', 
-                         bids_anat = 'sub-ON08710_ses-1_anat.tar.gz'
+                         bids_anat = 'sub-ON08710_ses-1_anat.tar.gz', 
+                         out_options = ['bids','flat']
                          )
+data_dict['hvdata'] = dict()
+data_dict['hvdata']['v2.0.0'] = dict(
+                        parent_dir = 'HVDATA_V2_0_0',
+                        out_dir = 'hvdata/v_2_0_0',
+                        out_options = ['flat']
+                        
+                        )
 
+
+
+## Define output structure
 outputs = {}
 outputs['bids'] = dict(
     topdir = 'BIDS',
@@ -67,9 +78,10 @@ class megdata():
                  out_format='bids'
                  ):
         '''
+        task_type : 'rest' | 'hvdata'
         get_types = ['meg','ortho','fsrecon','mneout','noise','all']
         
-        out_format = bids | single
+        out_format = bids | flat
         '''
         
         self.task_type = task_type
