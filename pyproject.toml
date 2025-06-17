@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "megcore_getdata"
+description = "Data downloader/formatter for megcore testing and tutorial data"
+readme = "README.md"
+requires-python = ">3.9"
+
+authors = [
+  { name="Jeff Stout", email="stoutjd@nih.gov" },
+]
+
+license = {text = "UNLICENSE"}
+classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: UNLICENSE",
+        "Operating System :: Linux/Unix",
+    ]
+dependencies = [
+'mne', 'nibabel',
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+testing = ['pytest']
+
+#[project.scripts]
+
+
+#[tool.setuptools.packages.find]
+#include = ["nih2mne*"]
+#exclude = ["extras*", "conda*"]
