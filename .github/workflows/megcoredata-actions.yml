@@ -11,9 +11,6 @@ jobs:
         python-version: ["3.11"]
     steps:
       - uses: actions/checkout@v4
-        with:
-          auto-update-conda: true
-          python-version: ${{ matrix.python-version }}
       - name: Install Python and Pytest
         shell: bash -el {0}
         run: sudo apt install python git -y  
