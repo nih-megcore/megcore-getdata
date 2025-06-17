@@ -59,8 +59,8 @@ def test_megdata_bids_generation(test_setup):
     outputs = [i for i in outputs if i!='']
     outputs = sorted(outputs)
     
-    import pysam
-    outputlist_fname = op.join(pysam.__path__[0], 'tests','test_outputs', 'bids_outputs_list.txt')
+    
+    outputlist_fname = op.join(op.dirname(__file__),'test_outputs', 'bids_outputs_list.txt')
     
     with open(outputlist_fname,'r') as f:
         test_outputs = f.readlines()

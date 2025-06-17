@@ -18,9 +18,7 @@ classifiers=[
         "License :: OSI Approved :: UNLICENSE",
         "Operating System :: Linux/Unix",
     ]
-dependencies = [
-'mne', 'nibabel',
-]
+dependencies = ["requests"] 
 dynamic = ["version"]
 
 [project.optional-dependencies]

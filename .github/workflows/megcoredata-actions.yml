@@ -15,9 +15,9 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
-      - name: Install MNE
+      - name: Install Python and Pytest
         shell: bash -el {0}
-        run: conda install --override-channels --channel=conda-forge 'python<3.12' pytest  
+        run: conda install --override-channels --channel=conda-forge 'python<3.12' pytest pip  
       - name: Install Git
         run: sudo apt install git -y
       - name: Pip Install megcore-getdata
@@ -25,5 +25,5 @@ jobs:
         run: $CONDA/bin/pip install git+https://github.com/nih-megcore/megcore-getdata.git
       - name: Pytest
         shell: bash -el {0}
-        run: $CONDA/bin/pytest
+        run: pytest
   
