@@ -8,7 +8,7 @@ Created on Mon Jun  2 14:19:29 2025
 
 import glob
 import pytest
-from pysam.get_testdata import megdata
+from ..get_testdata import megdata
 import os, os.path as op
 import shutil
 
